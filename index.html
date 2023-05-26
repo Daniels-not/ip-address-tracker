@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main>
+      <section class="section1">
+        <h1>IP Address Tracker</h1>
+        <form action="#" id="ipInputform">
+          <input
+            type="text"
+            placeholder="Search for any IP address or domain"
+            class="IPinput pointer"
+            id="formInputData"
+          />
+          <button type="submit" class="sbmtButton pointer" id="submitButton">
+            <img src="./images/icon-arrow.svg" alt="icon-arrow" />
+          </button>
+        </form>
+      </section>
+      <section class="section2">
+        <div class="IP-details-box">
+          <div class="IP-details-box-div1 IP-details-box-divs">
+            IP ADDRESS<span
+              class="IP-details-box-divs-spans"
+              id="ipAddress"
+            ></span>
+          </div>
+          <div class="IP-details-box-div2 IP-details-box-divs">
+            LOCATION<span
+              class="IP-details-box-divs-spans"
+              id="ipLocation"
+            ></span>
+          </div>
+          <div class="IP-details-box-div3 IP-details-box-divs">
+            TIMEZONE<span
+              class="IP-details-box-divs-spans"
+              id="ipTimeZone"
+            ></span>
+          </div>
+          <div class="IP-details-box-div4 IP-details-box-divs">
+            ISP<span class="IP-details-box-divs-spans" id="ipISP"></span>
+          </div>
+        </div>
+
+        <!-- add offset value dynamically using the API -->
+        <div id="map"></div>
+      </section>
+    </main>
+    <script src="./Index.js"></script>
+  </body>
+</html>
